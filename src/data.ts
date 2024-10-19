@@ -1,5 +1,5 @@
 import path from 'path';
-import fs from 'node:fs'
+import fs from 'node:fs';
 
 // 导入 JSON 文件
 import torotNames from './assets/name.json';
@@ -7,11 +7,11 @@ import upTexts from './assets/upText.json';
 import reversedTexts from './assets/reversedText.json';
 import tarotImgs from './assets/picUrl.json';
 
-// 导入图片文件
+// 读取图片文件并将其存储为 Buffer
 const tarotImages = Object.fromEntries(
   Object.entries(tarotImgs).map(([key, value]) => [
     key,
-    require(`${path.join(__dirname, value)}`)
+    fs.readFileSync(path.join(__dirname, value))  // 直接读取文件
   ])
 );
 
@@ -31,7 +31,7 @@ const tarotData = async (): Promise<ITarot[]> => {
   const keys = Object.keys(torotNames);
 
   return keys.map((item) => {
-    const picBuffer = fs.readFileSync(tarotImages[item]);  // 直接使用导入的图片
+    const picBuffer = tarotImages[item];  // 使用已读取的 Buffer
 
     return {
       picBuffer,

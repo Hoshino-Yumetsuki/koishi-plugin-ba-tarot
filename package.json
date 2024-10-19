@@ -1,7 +1,7 @@
 {
   "name": "@q78kg/koishi-plugin-ba-tarot",
   "description": "ba塔罗牌抽取",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
