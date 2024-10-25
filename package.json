@@ -2,10 +2,11 @@
   "name": "@q78kg/koishi-plugin-ba-tarot",
   "description": "ba塔罗牌抽取",
   "version": "1.0.4",
-  "main": "lib/index.js",
-  "typings": "lib/index.d.ts",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "node esbuild.config.mjs"
+  },
   "files": [
-    "lib",
     "dist"
   ],
   "license": "MIT",
@@ -22,5 +23,9 @@
   ],
   "peerDependencies": {
     "koishi": "^4.17.2"
+  },
+  "devDependencies": {
+    "@sprout2000/esbuild-copy-plugin": "^1.1.16",
+    "esbuild": "^0.24.0"
   }
 }
