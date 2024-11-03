@@ -7,7 +7,7 @@
     "build": "node esbuild.config.mjs"
   },
   "files": [
-    "dist"
+    "lib"
   ],
   "license": "MIT",
   "repository": {
