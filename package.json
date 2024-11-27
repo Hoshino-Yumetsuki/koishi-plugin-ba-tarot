@@ -3,6 +3,7 @@
   "description": "ba塔罗牌抽取",
   "version": "1.0.5",
   "main": "lib/index.js",
+  "type": "module",
   "scripts": {
     "build": "node esbuild.config.mjs"
   },
